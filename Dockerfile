@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full #base
+FROM gitpod/workspace-full
 
 #add your tools here
 
