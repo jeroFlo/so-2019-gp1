@@ -221,9 +221,13 @@ QEMUGDB = $(shell if $(QEMU) -help | grep -q '^-gdb'; \
 	else echo "-s -p $(GDBPORT)"; fi)
 ifndef CPUS
 CPUS := 1
+<<<<<<< HEAD
+=======
+#ponerle solo un core
+>>>>>>> f8b436d47480897acd26aa0b13889e958113f695
 endif
 QEMUOPTS = -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp $(CPUS) -m 512 $(QEMUEXTRA)
-
+# drive que archivos seran los discos duros: fs.img los comandos y xv6.img el SO y 512 mbytes de ram
 qemu: fs.img xv6.img
 	$(QEMU) -serial mon:stdio $(QEMUOPTS)
 
