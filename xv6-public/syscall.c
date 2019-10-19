@@ -106,6 +106,7 @@ extern int sys_uptime(void);
 extern int sys_shutdown(void);
 extern int sys_reboot(void);
 
+
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
 [SYS_exit]    sys_exit,
@@ -130,6 +131,7 @@ static int (*syscalls[])(void) = {
 [SYS_close]   sys_close,
 [SYS_shutdown] sys_shutdown,
 [SYS_reboot] sys_reboot
+
 
 };
 char *nameCallSystem[] ={"fork","exit","wait","pipe","read","kill","exec","fstat","chdir","dup","getpid",\
