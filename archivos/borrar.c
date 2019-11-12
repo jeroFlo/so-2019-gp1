@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -14,4 +13,4 @@ int main(int argc, char** argv){
      char oldpath[strlen(file)+strlen(pwd)+2];
      sprintf(oldpath,"%s/%s",pwd,file); 
      unlink(oldpath);
-}
+}   
